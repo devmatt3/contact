@@ -1,0 +1,3 @@
+
+<input class="input-bubble" #name (change)="inputChange(name.value)">
+<div class="input-bubble__title" [ngClass]="{'input-bubble__title': name.value == '', 'input-bubble__title-test': name.value != ''}">Name</div>
