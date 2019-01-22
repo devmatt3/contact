@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -7,17 +8,38 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  inputClass: String = "contact-input__title";
+  @ViewChild("name") inputField: ElementRef;
+
+  contactForm = new FormGroup({
+    name: new FormControl(''),
+    phone: new FormControl(''),
+    email: new FormControl(''),
+    organization: new FormControl(''),
+    comments: new FormControl('')
+  });
+
+
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
 
   inputChange(input){
-    if("" != input){
-
+    if (input != "") {
+      this.inputClass = "tek-input__title-active";
+    } else {
+      this.inputClass = "tek-input__title";
     }
   }
 
+  titleClick(){
+    this.inputField.nativeElement.focus();
+  }
 
-
+  submit(){
+    console.log(this.contactForm);
+  }
 }

@@ -1,5 +1,41 @@
+.contact-content-section__wrap {
+  width: 100%;
 
-.input-bubble{
+}
+
+.contact-content__section-1 {
+  display: inline-block;
+  width: 14%;
+}
+
+.contact-content__section-2 {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  border-left: 5px dotted black;
+  height: 100%;
+  margin-left: 8px;
+}
+
+.contact-content__section-3 {
+  position: fixed;
+  display: inline-block;
+  width: 35%;
+  background: black;
+  height: 19%;
+}
+
+.contact-content-input__wrap {
+  display: inline-block;
+  width: 35%;
+}
+
+.contact-content__input-textarea {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.contact-content__input {
   border: 0;
   outline: 0;
   background: transparent;
@@ -7,31 +43,16 @@
   font-size: 20px;
 }
 
-.input-bubble:focus{
+.contact-content-input__title {
+  font-size: 20px;
+}
+
+.contact-content__input:focus {
   border-bottom: 4px solid black;
-  box-shadow: 0px 20px 40px rgba(0,0,0,.1);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
   outline: 0;
 }
 
-.input-bubble__title{
-  margin-top: -22px;
-  font-size: 20px;
-  transition: margin-top 0.2s;
-}
-
-.input-bubble:focus + .input-bubble__title{
-  margin-top: 0;
+.contact-content__input:focus+.contact-content-input__title {
   font-weight: bold;
 }
-
-.input-bubble__title-test{
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.input-bubble:focus + .input-bubble__title-test{
- font-weight: bold;
-}
-
-
-

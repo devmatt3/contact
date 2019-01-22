@@ -1,3 +1,35 @@
+<div class="contact-content-section__wrap">
+  <div class="contact-content__section-1"></div>
+  <div class="contact-content__section-2">
+    <form action="" [formGroup]="contactForm" (ngSubmit)="submit()">
 
-<input class="input-bubble" #name (change)="inputChange(name.value)">
-<div class="input-bubble__title" [ngClass]="{'input-bubble__title': name.value == '', 'input-bubble__title-test': name.value != ''}">Name</div>
+      <div class="contact-content-input__wrap">
+        <input class="contact-content__input" type="text" #name formControlName="name">
+        <div class="contact-content-input__title">Name</div>
+      </div>
+
+      <div class="contact-content-input__wrap">
+        <input class="contact-content__input" type="text" #phone formControlName="phone">
+        <div class="contact-content-input__title">Phone</div>
+      </div>
+
+      <div class="contact-content-input__wrap">
+        <input class="contact-content__input" type="email" #email formControlName="email">
+        <div class="contact-content-input__title">Email</div>
+      </div>
+
+      <div class="contact-content-input__wrap">
+        <input class="contact-content__input" type="text" #org formControlName="organization">
+        <div class="contact-content-input__title">Org</div>
+      </div>
+
+      <div class="contact-content-input__wrap-textarea">
+        <textarea name="" id="" cols="45" class="contact-content__input contact-content__input-textarea"></textarea>
+        <div class="contact-content-input__title">Comments</div>
+      </div>
+    </form>
+  </div>
+  <div class="contact-content__section-3">
+    Section 3
+  </div>
+</div>
